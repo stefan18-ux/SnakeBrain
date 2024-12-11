@@ -116,4 +116,12 @@ python3 testing.py
 
 ## Conclusion
 
-This testing framework provides an empirical evaluation of grid traversal strategies. By measuring coverage efficiency and visualizing performance, it facilitates the refinement of movement algorithms to optimize grid coverage in diverse scenarios.
+The implemented solution leverages the following key principles to optimize grid traversal:
+
+Co-Prime Steps: Prime numbers are used for movement steps to ensure a high likelihood that the step size is co-prime with the grid dimensions. This reduces the probability of revisiting the same cell multiple times, thereby maximizing efficiency.
+
+Coverage Efficiency: Co-prime step sizes create a traversal pattern that uniformly covers the grid. This minimizes overlaps and ensures that cells are visited in an optimal sequence, even on grids with unusual dimensions.
+
+Adaptive Step Sizes: By dynamically adjusting the range of primes based on the current command index, the algorithm adapts to the grid's scale. Smaller steps are used for smaller grids to ensure precision, while larger steps are employed for larger grids to maintain efficiency. This adaptability ensures that the number of moves remains proportional to the grid size, regardless of its dimensions.
+
+This combination of co-prime logic, efficient coverage, and adaptability makes the solution robust across a wide range of scenarios, balancing theoretical soundness with practical performance.
