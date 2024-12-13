@@ -92,19 +92,13 @@ The performance is visualized using a scatter plot and trendlines:
 - **Y-axis**: Number of steps taken.  
 - Logarithmic scales are optionally used for better representation of large ranges.
 
-## How to Run the Test
+## How to Run the Tests
 
-1. Generate the movement commands in `file.txt` using the desired strategy.  
-
-```python
-python3 generate.py
-```
-
-2. Execute the test framework:
+Execute the test framework:
    - Input the range of grid areas and the number of tests per area.
 
 ```python
-python3 testing.py
+python3 GenAndTest.py
 ```
 
 3. Review the printed performance summary and the saved plot (`performance_plot.png`).

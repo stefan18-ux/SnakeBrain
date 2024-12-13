@@ -2,8 +2,16 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
-def generate_commands():
-    pass
+def is_prime(n):
+    """
+    Checks is a number is prime
+    """
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
 def test_strategy(grid_width, grid_height, commands):
     """Simulates the snake's movements on a grid and checks coverage."""
@@ -109,28 +117,3 @@ def plot_performance(performance_data):
 
     # Optionally, show the plot in the interactive window
     plt.show()  # Show plot in the interactive window
-
-def main():
-    """Run multiple simulations and visualize results."""
-    print("Enter the range of grid areas:")
-    min_area = int(input("Minimum area: "))
-    max_area = int(input("Maximum area: "))
-    num_areas = int(input("Number of areas to test: "))
-    num_tests_per_area = int(input("Number of simulations per area: "))
-
-    # Read the commands only once
-    commands = generate_commands(0)
-    
-    areas = generate_areas(min_area, max_area, num_areas)
-    print(f"Generated areas: {areas}")
-    
-    performance_data = evaluate_strategy(areas, commands, num_tests_per_area)
-    
-    print("\nPerformance Summary:")
-    for area, avg_steps, max_steps in performance_data:
-        print(f"Area {area}: Avg Steps = {avg_steps:.2f}, Max Steps = {max_steps}")
-    
-    plot_performance(performance_data)
-
-if __name__ == '__main__':
-    main()
