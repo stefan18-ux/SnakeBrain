@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The goal of this project is to find an efficient way to traverse a grid and cover all the cells using a snake-like algorithm. The performance metric used is the number of moves (steps) it takes to visit all cells of the grid. We simulate the movement of the snake across different grid sizes and evaluate its performance. 
+The goal of this project is to find an efficient way to traverse a grid and cover all the cells using a snake-like algorithm. We measure the performance of a particular strategy by the number of moves it takes to visit all the cells. We simulate the movement of the snake across different grid sizes and evaluate its performance. 
 
 ### **Initial Idea: Spiral Traversal**
 
