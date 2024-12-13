@@ -37,12 +37,12 @@ Here are some of my best results:
 # Grid Coverage Strategy Testing
 ## Overview of Testing
 
-The testing framework evaluates the ability of the snake's movement strategy to cover grid areas efficiently. It simulates movements based on the commands in `file.txt` and measures coverage across varying grid sizes.
+The testing framework evaluates the ability of the snake's movement strategy to cover grid areas efficiently. It simulates movements based on the commands and measures coverage across varying grid sizes.
 
 ## Key Components of Testing
 
-### Command Reading  
-Movement commands are read from `file.txt`. Each command specifies a directional move:
+### Commands
+Movement commands are generated. Each command specifies a directional move:
 - `R` for moving one step to the right.
 - `D` for moving one step downward.
 
